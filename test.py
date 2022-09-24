@@ -8,7 +8,7 @@ from nltk.stem import WordNetLemmatizer
 import tensorflow as tf
 from tensorflow.keras import Sequential
 from tensorflow.keras.layers import Dense, Dropout
-
+from datetime import datetime
 
 nltk.download("punkt")
 nltk.download("wordnet")
@@ -91,6 +91,13 @@ def get_response(intents_list, intents_json):
     else:
         tag = intents_list[0]
         list_of_intents = intents_json["intents"]
+        if tag == "time":
+            now = datetime.now()
+            current_time = now.strftime("%H:%M:%S")
+            for i in list_of_intents:
+                if i["tag"] == "time":
+                    result = random.choice(i["responses"]) + current_time
+                    return result
         for i in list_of_intents:
             if i["tag"] == tag:
                 result = random.choice(i["responses"])

@@ -60,6 +60,12 @@
             "patterns": ["Good bye", "Bye", "Go there"],
             "responses": ["Go there", "Disappear"],
             "tag": "bye"
+        },
+        {
+            "context": "",
+            "patterns": ["Do you know current time", "What time do you have", "What time is it now"],
+            "responses": ["It is "],
+            "tag": "time"
         }
     ]
 }
