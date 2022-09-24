@@ -69,6 +69,12 @@
         },
         {
             "context": "",
+            "patterns": ["Which color do you like", "What is your favorite color"],
+            "responses": ["I like White", "My favorite color is White"],
+            "tag": "color"
+        },
+        {
+            "context": "",
             "patterns": ["Do you know current time", "What time do you have", "What time is it now"],
             "responses": ["It is "],
             "tag": "time"
