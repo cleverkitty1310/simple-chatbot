@@ -63,6 +63,12 @@
         },
         {
             "context": "",
+            "patterns": ["Where are you from"],
+            "responses": ["I am from US"],
+            "tag": "location"
+        },
+        {
+            "context": "",
             "patterns": ["Do you know current time", "What time do you have", "What time is it now"],
             "responses": ["It is "],
             "tag": "time"
